@@ -1,0 +1,184 @@
+/**
+ * @Author : husky520
+ * @Last saved : 2017-10-17
+ * @version : v1.0
+ */
+
+
+/* CSS reset (后期植入页面后无需这些) */
+* {
+    margin: 0;
+    padding: 0;
+}
+ul,ol,dl,li {
+    list-style: none;
+}
+
+
+
+/* 样式开始 */
+
+.banner {
+    /*height: 400px;*/
+    position: relative;
+    overflow: hidden;
+}
+
+/* 主体部分 */
+.banner-body {
+    margin-left: 0%;
+    width: 400%;
+    height: 100%;
+}
+.banner-body>li {
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+.banner-body .banner-item-1 {
+    background: url('../image/shop.jpg') no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.banner-body .banner-item-2 {
+    background: url('../image/subway.jpg') no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.banner-body .banner-item-3 {
+    background: url('../image/sunset.jpg') no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.banner-body .banner-item-4 {
+    background: url('../image/wood.jpg') no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+/* 序号标记部分 */
+.banner-order {
+    position: absolute;
+    bottom: 43px;
+    left: 50%;
+    margin-left: -44px;
+    width: 88px;
+    height: 12px;
+}
+.banner-order>li {
+    float: left;
+    width: 6px;
+    height: 6px;
+    margin: 0 5px;
+    border-radius: 6px;
+    border: 2px solid #fff;
+    opacity: .5;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.banner-order>.banner-order-active {
+    opacity: 1;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,.3)
+}
+
+/* 左右按钮部分 */
+.banner-btn {
+    position: absolute;
+    width: 100%;
+    /*top: 165px;*/
+}
+.banner-btn>li {
+    text-align: center;
+}
+.banner-btn .banner-btn-left {
+    float: left;
+}
+.banner-btn .banner-btn-right {
+    float: right;
+}
+.banner-btn>li>a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 45px;
+    font-weight: bold;
+    font-family: "宋体";
+    color: rgba(255,255,255,0);
+    transition: all 0.3s;
+}
+.banner .banner-body:hover ~.banner-btn>li>a{
+    color: rgba(255,255,255,.25);
+}
+.banner-btn:hover a{
+    color: rgba(255,255,255,.25);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 响应式设计 */
+
+
+/* 超小屏幕（手机，小于 768px） */
+@media (max-width: 786px) {
+    .banner {
+        height: 350px;
+    }
+    .banner-btn {
+        top: 140px;
+    }
+}
+
+/* 小屏幕（平板，大于等于 768px） */
+@media (min-width: 786px) {
+    .banner {
+        height: 350px;
+    }
+    .banner-btn {
+        top: 140px;
+    }
+}
+
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+@media (min-width: 992px) {
+    .banner {
+        height: 415px;
+    }
+    .banner-btn {
+        top: 165px;
+    }
+}
+
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+@media (min-width: 1200px) {
+    .banner {
+        height: 500px;
+    }
+    .banner-btn {
+        top: 205px;
+    }
+}
